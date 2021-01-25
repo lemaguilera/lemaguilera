@@ -44,6 +44,12 @@
         initTime: 0
     };
 
+    const getCard = () => {
+        const card = gui.card.cloneNode(true);
+        card.classList.add("closed");
+        return card;
+    };
+
     const resetGame = () => {
         game = {
             level: {},

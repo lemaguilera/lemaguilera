@@ -108,9 +108,3 @@ const combinations = (arr1 = [], arr2 = []) => {
     return result;
 };
 
-
-const getCard = () => {
-    const card = gui.card.cloneNode(true);
-    card.classList.add("closed");
-    return card;
-};
