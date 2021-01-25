@@ -1,7 +1,8 @@
 let currentPage = "";
 
 const reload = async () => {
-    const result = await fetch("./").then(_ => _.text());
+    const ts = new Date().getTime();
+    const result = await fetch(`${location.href}?cd=${ts}`).then(_ => _.text());
     if (currentPage === "") {
         currentPage = result;
         setTimeout(reload, 3e3);

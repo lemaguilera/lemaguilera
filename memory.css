@@ -1,0 +1,105 @@
+
+.game div.board {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    flex-direction: row;
+}
+
+.card {
+    width: 50px;
+    height: 75px;
+    margin: 5px;
+    box-sizing: border-box;
+    border: 3px solid #000;
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: fantasy;
+    background: #fffc;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+}
+
+.card.closed {
+    background: #333;
+}
+
+.level > div{
+    cursor: pointer;
+    border: 2px solid #000;
+    background: none;
+    color: #000;
+    padding: 15px;
+    box-sizing: border-box;
+    width: 200px;
+    margin: 5px;
+    text-align: center;
+}
+
+.level > div:hover {
+    color: #fff;
+    background: #000;
+}
+
+.score {
+    text-align: justify;
+}
+
+.score > div {
+    width: 100%;
+}
+
+.score > div,
+.score > input {
+    margin-bottom: 15px;
+}
+
+
+
+.game .ranking>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ranking .header {
+    font-weight: bold;
+}
+
+.ranking .row {
+    margin: 5px 0;
+    padding-right: 10px;
+}
+
+.ranking .first {
+    background: #6f69;
+    color: #000;
+}
+
+.ranking .first .rank {
+    font-weight: bold;
+}
+
+.ranking .mistakes,
+.ranking .time,
+.ranking .dificulty {
+    font-size: 12px;
+}
+
+.game div.rankingContainer {
+    width: 100%;
+    max-width: 420px;
+}
+
+.game div.rankingContainer .ranking {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    overflow-y: scroll;
+}

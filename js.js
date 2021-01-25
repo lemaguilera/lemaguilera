@@ -6,6 +6,7 @@ const url = "https://script.google.com/macros/s/AKfycbwodl2pprNYh1ICApuq6LSux5Ex
 const post = async (body) => fetch(url, {
     method: 'post',
     redirect: 'follow',
+    mode: "no-cors",
     body: JSON.stringify(body)
 })
     .then(r => r.json().then(_ => ({
