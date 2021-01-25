@@ -33,7 +33,7 @@
         }
     };
 
-    const game = {
+    let game = {
         level: {},
         gui: gui.home,
         cards: [],
@@ -42,6 +42,19 @@
         sel2: false,
         mistakes: 0,
         initTime: 0
+    };
+
+    const resetGame = () => {
+        game = {
+            level: {},
+            gui: gui.home,
+            cards: [],
+            selStatus: 0,
+            sel1: false,
+            sel2: false,
+            mistakes: 0,
+            initTime: 0
+        };
     };
 
     gui.home.querySelector("button").addEventListener("click", () => {
@@ -194,12 +207,14 @@
                     game.gui = gui.home;
                     gui.game.appendChild(gui.home);
                     updateRanking();
+                    resetGame();
                 })
                 .catch(_ => {
                     gui.game.removeChild(game.gui);
                     game.gui = gui.home;
                     gui.game.appendChild(gui.home);
                     updateRanking();
+                    resetGame();
                 })
                 ;
         });
