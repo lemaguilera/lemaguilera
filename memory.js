@@ -172,7 +172,7 @@ const renderScore = () => {
     const save = gui.score.querySelector("button");
 
     const totalTime = new Date().getTime() - game.initTime;
-    time.innerHTML = `Total time: ${Math.round(r.time / 10) / 100}s`;
+    time.innerHTML = `Total time: ${Math.round(totalTime / 10) / 100}s`;
     mistakes.innerHTML = `Mistakes: ${game.mistakes}`;
 
     game.gui = gui.score;
