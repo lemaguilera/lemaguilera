@@ -1,7 +1,7 @@
 const pageContent = document.querySelector("#page-content");
 document.body.appendChild(document.importNode(pageContent.content, true));
 
-const url = "https://script.google.com/macros/s/AKfycbwodl2pprNYh1ICApuq6LSux5ExC62RchbDU5jB2AnqkMhCJJSH/exec";
+const url = "https://script.google.com/macros/s/AKfycbwK752-3tVFU4a_75u5rSQCMN68GxtpnxqPnBcEqRfOQoohRFDvXrBFlteznutqCnUHuA/exec";
 
 const post = async (body) => fetch(url, {
     method: 'post',
